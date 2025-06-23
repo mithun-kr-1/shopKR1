@@ -1,0 +1,70 @@
+.bestseller-container {
+  margin-top: -40px;
+  margin-bottom: 35px;
+}
+
+.bestseller-header {
+  text-align: center;
+  font-size: 1.875rem; 
+  padding: 2rem 0; 
+  display : flex;  
+  margin-left: 400px;
+}
+
+.bestseller-headerr {
+  text-align: center;
+  padding: 2rem 0; 
+  display : flex;  
+  margin-left: 20px;
+}
+
+.bestseller-description {
+  width: 100%;
+  margin-top: -4rem;
+  font-size: 0.75rem;       
+  color: #4b5563; 
+  text-align: justify;   
+}
+
+@media (min-width: 640px) {
+  .bestseller-description {
+    font-size: 0.875rem; 
+  }
+}
+
+@media (min-width: 768px) {
+  .bestseller-description {
+    font-size: 1rem; 
+  }
+}
+
+.bestseller-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem; 
+}
+
+@media (min-width: 640px) {
+  .bestseller-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .bestseller-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bestseller-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.bestseller-icon {
+  margin-top: -220px;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1.25rem auto;
+}

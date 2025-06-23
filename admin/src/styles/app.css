@@ -1,0 +1,18 @@
+.app-container {
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  width: 100%;
+}
+
+.app-content {
+  width: 70%;
+  margin-left: max(5vw, 25px);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #4b5563; /* Tailwind's gray-600 */
+  font-size: 1rem;
+}

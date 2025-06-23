@@ -1,0 +1,30 @@
+.navbar-container {
+  display: flex;
+  margin: -8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 4%;  
+  background-color: rgba(97, 80, 225, 0.35); 
+}
+
+.navbar-logo {
+  width: max(10%, 100px);
+  padding: 1rem 1rem;
+}
+
+.navbar-logout-button {
+  background-color: #c2ef45;
+  color: rgb(118, 26, 12);
+  padding: 1rem 1rem;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .navbar-logout-button {
+    padding: 1rem 1.75rem;
+    font-size: 0.875rem;
+  }
+}
