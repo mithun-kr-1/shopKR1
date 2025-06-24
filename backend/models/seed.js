@@ -8,10 +8,6 @@ const dummyUsers = [
     name: "Mithun K R",
     email: "mithunkr533@gmail.com",
     password: "Mithun@123",
-    // cartData: {
-    //   "item123": { quantity: 2, price: 299 },
-    //   "item456": { quantity: 1, price: 499 },
-    // },
   },
   
 ];

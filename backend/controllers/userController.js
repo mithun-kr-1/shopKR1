@@ -11,13 +11,17 @@ const createToken = (id) => {
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
-
+    const emailNormalized = email.trim().toLowerCase();
+    console.log('Login attempt:', { emailRaw: email, emailNormalized, password });
     // check if the user is not exist
-    const user = await userModel.findOne({ email });
+    const user = await userModel.findOne({ email: emailNormalized });
+    console.log('User found:', user);
     if (!user) {
       return res.json({ success: false, message: "User not found" });
     }
+    console.log('Comparing password:', password, 'with hash:', user.password);
     const isMatched = await bcrypt.compare(password, user.password);
+    console.log('Password match:', isMatched);
     if (!isMatched) {
       return res.json({
         success: false,
@@ -36,19 +40,20 @@ const loginUser = async (req, res) => {
 const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
+    const emailNormalized = email.trim().toLowerCase();
     // checking for user if already registered
-    const exists = await userModel.findOne({ email });
+    const exists = await userModel.findOne({ email: emailNormalized });
     if (exists) {
       return res.json({ success: false, message: "User already exists" });
     }
     // validating email format and strong password
-    if (!validator.isEmail(email)) {
+    if (!validator.isEmail(emailNormalized)) {
       return res.json({
         success: false,
         message: "Please Enter a valid Email",
       });
     }
-    if (password.length < 8) {
+    if (password.length < 5) {
       return res.json({
         success: false,
         message:
@@ -63,7 +68,7 @@ const registerUser = async (req, res) => {
     // Creating new user
     const newUser = new userModel({
       name,
-      email,
+      email: emailNormalized,
       password: hashedPassword,
     });
 

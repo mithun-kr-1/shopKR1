@@ -10,11 +10,7 @@ const Contact = () => {
         <Title text1={"CONTACT"} text2={"US"} />
       </div>
       <div className="contact-content">
-        <img
-          src="mart.png"
-          alt="Contact Image"
-          className="contact-image"
-        />
+      <img src={assets.mart} className="contact-image" alt="Contact Image" />
         <div className="contact-details">
           <p className="contact-title">Our Store</p>
           <p className="contact-text">

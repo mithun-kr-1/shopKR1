@@ -40,9 +40,8 @@ const App = () => {
           <Route path="/place-order" element={<PlaceOrder />} />
           <Route path="/about" element={<About />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/admin/rajfits224244" element={<AdminOpen />} />
+          <Route path="/admin" element={<AdminOpen />} />
           <Route path="/myprofile" element={<MyProfile />} />
-          <Route path="*" element={<Loading />} />
         </Routes>
       </Suspense>
       <Footer />

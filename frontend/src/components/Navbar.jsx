@@ -22,6 +22,15 @@ const Navbar = () => {
     setCartItems({});
   };
 
+  const admin = () => {
+    setToken("");
+    navigate("");
+    localStorage.removeItem("token");
+    navigate("/admin");
+    setCartItems({});
+  };
+
+
   return (
     <div className="navbar">
       <Link to="/">
@@ -73,6 +82,9 @@ const Navbar = () => {
               </p>
               <p className="dropdown-item" onClick={logout}>
                 Logout
+              </p>
+              <p className="dropdown-item" onClick={admin}>
+                Admin Dashboard
               </p>
             </div>
           )}

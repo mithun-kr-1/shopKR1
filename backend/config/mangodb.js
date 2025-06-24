@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   mongoose.connection.on("connected", () => {
-    console.log("DB Connected in: " + process.env.MANGODB_URI)
+    console.log("DB Connected in: " + process.env.MONGO_URI)
     
   });
-  await mongoose.connect(`${process.env.MANGODB_URI}/ShopKR`, );
+  await mongoose.connect(process.env.MONGO_URI);
 };
 
 export default connectDB;
